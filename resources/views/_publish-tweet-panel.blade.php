@@ -5,7 +5,13 @@
         <textarea name="body" class="w-full" placeholder="What's up..."></textarea>
         <hr class="my-4">
         <footer class="flex justify-between">
-            <img src="{{ auth()->user()->getAvatarAtribute() }}" alt="your avatar" class="rounded-full">
+            <img 
+                src="{{ auth()->user()->getAvatarAtribute() }}" 
+                alt="your avatar" 
+                class="rounded-full"
+                width="50"
+                height="50"
+            >
             <button type="submit" class="bg-blue-500 rounded-lg p-2 text-white">Post</button>
         </footer>
     </form>
