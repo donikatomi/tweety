@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class TweetController extends Controller
 {
+    public function index()
+    {
+        $tweets = Tweet::latest()->get();
+        return view('home')->with('tweets', auth()->user()->timeline());
+    }
+    
     public function store()
     {
         $atributes = request()->validate(['body' => 'required|max:255']);
